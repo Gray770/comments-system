@@ -71,15 +71,18 @@ button:hover {
     transform: scale(1.05);
 }
 
-.comment-list {
+.comments-list {
     margin: 0 auto;
     display: flex;
+    flex-flow: wrap;
     justify-content: center;
     align-items: center; 
     padding: 3em;
+    max-width: 29em;
 }
 
 .user-comment {
+    margin: 0 0 1.5em;
     width: 25em;
     border: 3px #cfdee5 solid;
     padding: 2em;
@@ -91,9 +94,13 @@ button:hover {
     display: flex;
     align-items: center;
     border-bottom: 1px #cfdee5 solid;
-    padding: 0 0.3em;
+    padding: 0.3em;
 }
 
 .comment-username img{
     margin: 0 0.5em 0 0;
+}
+
+.comment-content {
+    padding: 0.3em;
 }

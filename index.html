@@ -9,26 +9,37 @@
 </head>
 <body>
     <div class="form-container">
-        <form method="post">
+        <form id="form" method="post" >
             <div class="header">
-                <input class="username" name="username" type="text" placeholder="Username" autocomplete="off">
+                <input class="username" id="username" name="username" type="text" placeholder="Username" autocomplete="off" required>
             </div>
-                <textarea class="comment" id="content" rows="5" cols="30" name="comment" placeholder="Your comment"></textarea>
+                <textarea class="comment" id="content" name="comment" rows="5" cols="30"  placeholder="Your comment" required></textarea>
             <div class="footer">
                 <button type="submit">POST</button>
             </div>
         </form>
     </div>
-    <div class="comment-list">
+    <div class="comments-list" id="comments-list">
         <div class="user-comment">
             <div class="comment-username">
                 <img src="/img/user.png">
-                <p>Chris</p>
+                <div class="name">Chris</div>
             </div>
             <div class="comment-content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos veritatis laudantium quia, dolorem ullam harum.</p>
+                <div class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos veritatis laudantium quia, dolorem ullam harum.</div>
             </div>
         </div>
+        <script src="script.js" id="comment-template">
+            <section>
+                <div class="comment-username">
+                    <img src="/img/user.png"/>
+                    <div class="name">{{name}}</div>
+                </div>
+                <div class="comment-content">
+                    <div class="comment-text">{{comment}}</div>
+                </div>
+            </section>
+        </script>
     </div>
 </body>
 </html>
