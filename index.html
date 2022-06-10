@@ -21,9 +21,12 @@
     </div>
     <div class="comments-list" id="comments-list">
         <div class="user-comment">
-            <div class="comment-username">
-                <img src="/img/user.png">
-                <div class="name">Chris</div>
+            <div class="comment-header">
+                <div><img src="/img/user.png"></div>
+                <div class="info">
+                    <span class="name">Chris</span>
+                    <span class="dateTime">10/6/2022 15:32</span>
+                </div>
             </div>
             <div class="comment-content">
                 <div class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos veritatis laudantium quia, dolorem ullam harum.</div>
@@ -31,9 +34,12 @@
         </div>
         <script src="script.js" id="comment-template">
             <section>
-                <div class="comment-username">
+                <div class="comment-header">
                     <img src="/img/user.png"/>
-                    <div class="name">{{name}}</div>
+                    <div class="info">
+                        <span class="name">{{name}}</span>
+                        <span class="dateTime">{{dateTime}}</span>
+                    </div>
                 </div>
                 <div class="comment-content">
                     <div class="comment-text">{{comment}}</div>

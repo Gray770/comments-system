@@ -11,10 +11,13 @@ function addNewComment(e){
         "name": document.getElementById('username').value,
         "comment": document.getElementById('content').value
     } 
-    console.log(addNewComment);
+
+    var date = new Date()
+    var dateTime = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes(); // ? = if...else
 
     var newCommentInfo = commentTemplate.innerHTML.replace('{{name}}',addNewComment.name);
     newCommentInfo = newCommentInfo.replace('{{comment}}',addNewComment.comment);
+    newCommentInfo = newCommentInfo.replace('{{dateTime}}',dateTime);
 
     var newComment = document.createElement('div');
     newComment.classList.add('user-comment'); // assigns 'user-comment' class to div previously created
