@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="styles.css">
     <title>Comments</title>
 </head>
+<header>
+    <div class="button-container">
+        <button id="theme" class="theme-switch" type="submit">
+            <div class="themeIcon" id="themeIcon"></div>
+        </button>
+    </div>
+    <script src="themeswitch.js"></script>
+</header>
 <body>
     <div class="form-container">
         <form id="form" method="post" >
-            <div class="header">
+            <div class="form-header">
                 <input class="username" id="username" name="username" type="text" placeholder="Username" autocomplete="off" required>
             </div>
                 <textarea class="comment" id="content" name="comment" rows="5" cols="30"  placeholder="Your comment" required></textarea>
-            <div class="footer">
+            <div class="form-footer">
                 <button type="submit">POST</button>
             </div>
         </form>
