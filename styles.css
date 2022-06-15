@@ -146,6 +146,9 @@ form {
 
 .name {
     font-size: 16px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: clip;
 }
 
 .dateTime {
@@ -159,6 +162,9 @@ form {
 
 .comment-content {
     padding: 0.3em;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: clip;
 }
 
 /* DARK THEME */
