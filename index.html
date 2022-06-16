@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="themeswitch.js"></script>
+    <script src="script.js" defer></script>
     <title>Comments</title>
 </head>
 <header>
@@ -19,7 +21,7 @@
     <div class="form-container">
         <form id="form" method="post" >
             <div class="form-header">
-                <input class="username" id="username" name="username" type="text" placeholder="Username" autocomplete="off" required maxlength="12">
+                <input class="username" id="username" name="username" type="text" placeholder="Username" autocomplete="off" required maxlength="16">
             </div>
                 <textarea class="comment" id="content" name="comment" rows="5" cols="30"  placeholder="Your comment" required></textarea>
             <div class="form-footer">
@@ -28,32 +30,18 @@
         </form>
     </div>
     <div class="comments-list" id="comments-list">
-        <div class="user-comment">
+        <div class="user-comment" id="comment-template">
             <div class="comment-header">
                 <div><img src="/img/user.png" alt="Placeholder of user avatar"/></div>
                 <div class="info">
-                    <span class="name">Chris</span>
-                    <span class="dateTime">10/6/2022 15:32</span>
+                    <span class="name">{{name}}</span>
+                    <span class="dateTime">{{dateTime}}</span>
                 </div>
             </div>
             <div class="comment-content">
-                <div class="comment-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quos veritatis laudantium quia, dolorem ullam harum.</div>
+                <div class="comment-text">{{content}}</div>
             </div>
         </div>
-        <script src="script.js" id="comment-template">
-            <section>
-                <div class="comment-header">
-                    <img src="/img/user.png" alt="Placeholder of user avatar"/>
-                    <div class="info">
-                        <span class="name">{{name}}</span>
-                        <span class="dateTime">{{dateTime}}</span>
-                    </div>
-                </div>
-                <div class="comment-content">
-                    <div class="comment-text">{{comment}}</div>
-                </div>
-            </section>
-        </script>
     </div>
 </body>
 </html>

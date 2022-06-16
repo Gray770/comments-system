@@ -167,6 +167,10 @@ form {
     text-overflow: clip;
 }
 
+#comment-template {
+    display: none;
+}
+
 /* DARK THEME */
 
 body.dark {
